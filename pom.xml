@@ -15,8 +15,12 @@
 		<maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
 		<junit-jupiuetr-version>5.10.2</junit-jupiuetr-version>
 		<mokito.junit-jupiter.version>5.7.0</mokito.junit-jupiter.version>
+
+		<lombok.version>1.18.30</lombok.version>
+		<log4j2.version>2.20.0</log4j2.version>
+		<commons-logging.version>1.2</commons-logging.version>
 	</properties>
-	
+
 	<!-- Déclaration de la dépendance vers JUnit -->
 	<dependencies>
 		<dependency>
@@ -30,6 +34,10 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-junit-jupiter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
 		</dependency>
 	</dependencies>
 	<!-- gestion de la dépendance vers JUnit -->
@@ -53,6 +61,34 @@
 				<version>${mokito.junit-jupiter.version}</version>
 				<scope>test</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-jcl</artifactId>
+				<version>${log4j2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>${commons-logging.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j2.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 

@@ -32,7 +32,8 @@ public class TondeuseServiceTest {
 	
 	@Test
 	void testerPpilotertondeuse() {
+		final String result = tondeuseService.piloterTondeuse();
 		// Assert
-		assertEquals("1 3 N 5 1 E", tondeuseService.piloterTondeuse("C:\\fichiers\\"));
+		assertEquals("1 3 N 5 1 E", result);
 	}
 }
