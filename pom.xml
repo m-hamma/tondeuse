@@ -19,6 +19,7 @@
 		<lombok.version>1.18.30</lombok.version>
 		<log4j2.version>2.20.0</log4j2.version>
 		<commons-logging.version>1.2</commons-logging.version>
+		<cdi-api.version>2.0.1</cdi-api.version>
 	</properties>
 
 	<!-- Déclaration de la dépendance vers JUnit -->
@@ -38,6 +39,26 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-jcl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.enterprise</groupId>
+			<artifactId>jakarta.enterprise.cdi-api</artifactId>
 		</dependency>
 	</dependencies>
 	<!-- gestion de la dépendance vers JUnit -->
@@ -88,7 +109,11 @@
 				<artifactId>log4j-api</artifactId>
 				<version>${log4j2.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>jakarta.enterprise</groupId>
+				<artifactId>jakarta.enterprise.cdi-api</artifactId>
+				<version>${cdi-api.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

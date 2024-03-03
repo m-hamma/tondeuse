@@ -10,6 +10,7 @@ import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.mhamma.tondeuse.service.TondeuseService;
+import com.mhamma.tondeuse.service.impl.TondeuseServiceImpl;
 
 /**
  * Classe de test pour le pilotage de la tondeuse.
@@ -23,7 +24,7 @@ import com.mhamma.tondeuse.service.TondeuseService;
 @ExtendWith(MockitoExtension.class)
 public class TondeuseServiceTest {
 	@Spy
-	TondeuseService tondeuseService;
+	TondeuseService tondeuseService=new TondeuseServiceImpl();
 	
 	@BeforeEach
 	public void setup() {
@@ -34,6 +35,6 @@ public class TondeuseServiceTest {
 	void testerPpilotertondeuse() {
 		final String result = tondeuseService.piloterTondeuse();
 		// Assert
-		assertEquals("1 3 N 5 1 E", result);
+		assertEquals("1 3 N 5 1 E", result); 
 	}
 }
